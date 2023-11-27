@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --grey: #A6A6A6;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--black);
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    /*padding-right: clamp(0.875rem, 10vw - 1.5rem, 7.125rem);
+    padding-left: clamp(1rem, 10vw - 1.5rem, 7.125rem);*/
+    padding: clamp(4.375rem, 9vw, 6.313rem) clamp(3.125rem, 11vw - 2.25rem, 7.125rem) clamp(4.125rem, 8.1vw + 0.1rem, 7.313rem);
+}
+.tesis{
+    color: var(--white);
+    font-weight: 500;
+    line-height: clamp(2.7rem, 6.6vw - 0.5rem, 4.65rem);
+    font-size: clamp(2.25rem, 5vw - 0.25rem, 3.875rem);
+    margin: 0;
+    max-width: 1190px;
+    letter-spacing: clamp(0rem, 2.05vw - 1rem, 0.034rem);
+    margin-bottom: clamp(3.688rem, 7.2vw + 0.1rem, 6.563rem);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(0.964rem, 2vw, 1.75rem);
+}
+.flex__cover2{
+    margin-bottom: clamp(1.25rem, 5.5vw - 1.5rem, 3.375rem);
+}
+.flex__item1 .flex__cover1 img{
+    width: clamp(19.906rem, 43vw - 1.8rem, 36.125rem);
+}
+.flex__item2 .flex__cover2 img{
+    width: clamp(20.875rem, 45vw - 1.8rem, 37.875rem);
+}
+.flex__description{
+    color: var(--grey);
+    font-size: clamp(0.75rem, 1.1vw + 0.2rem, 1.125rem);
+    font-weight: 500;
+    line-height: clamp(1.125rem, 1.7vw + 0.2rem, 1.688rem);
+    max-width: 507px;
+    margin: 0;
+    margin-bottom: clamp(2.125rem, 7.5vw - 1.5rem, 4.875rem);
+}
+.flex__btn{
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: clamp(0.75rem, 1vw + 0.25rem, 1rem);
+    font-weight: 600;
+    line-height: clamp(0.9rem, 2vw - 0.1rem, 1.2rem);
+    padding: clamp(0.689rem, 1.6vw - 0.1rem, 1.25rem) clamp(1.102rem, 2.4vw - 0.1rem, 2rem);
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    gap: clamp(2.5rem, 13.5vw - 4.2rem, 7.75rem);
+    padding-top: clamp(2.5rem, 4.6vw + 0.1rem, 4.188rem);
+    padding-bottom: clamp(2.5rem, 4.65vw + 0.1rem, 4.25rem);
+    margin-bottom: clamp(4.375rem, 8.3vw + 0.1rem, 7.5rem);
+}
+.footer__link{
+    text-decoration: none;
+    color: var(--black);
+    font-size: clamp(1.625rem, 2.8vw + 0.25rem, 2.625rem);
+    font-weight: 600;
+    line-height: clamp(1.95rem, 3.5vw + 0.25rem, 3.15rem);
+    letter-spacing: 0.100px;
+}
+@media(max-width: 767px){
+    .container{
+        padding: clamp(3.75rem, 2.9vw + 3rem, 4.375rem) clamp(0.875rem, 9.7vw - 1.5rem, 3.125rem) clamp(4.2rem, 2.9vw + 3rem, 4.375rem) clamp(1rem, 10vw - 1.65rem, 3.125rem);
+    }
+    .tesis{
+        line-height: clamp(1.875rem, 4.1vw + 0.75rem, 2.7rem);
+        font-size: clamp(1.563rem, 2.63vw + 0.75rem, 2rem);
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .flex__item1{
+        margin: 0 auto;
+    }
+    .flex__item1 .flex__cover1 img{
+        width: max(50vw, 330px);
+    }
+    .flex__item2 .flex__cover2 img{
+        width: max(50vw, 330px);
+    }
+    .flex__description{
+        max-width: max(321px,80vw);
+    }
+    .footer{
+        gap: clamp(1.813rem, 2.7vw + 1.2rem, 2.5rem);
+        padding: clamp(1.46rem, 4.65vw + 0.3rem, 2.5rem) 0 clamp(1.813rem, 5.52vw + 0.5rem, 3.125rem);
+        margin-bottom: clamp(3.75rem, 3vw + 2.95rem, 4.375rem);
+    }
+    .footer__link{
+        font-size: clamp(0.75rem, 4vw - 0.3rem, 1.625rem);
+        line-height: clamp(0.9rem, 4.65vw - 0.25rem, 1.95rem);
+    }
+}
