@@ -23,23 +23,43 @@ body{
     line-height: clamp(2.7rem, 6.6vw - 0.5rem, 4.65rem);
     font-size: clamp(2.25rem, 5vw - 0.25rem, 3.875rem);
     margin: 0;
-    max-width: 1190px;
+    /*max-width: 1190px;*/
     letter-spacing: clamp(0rem, 2.05vw - 1rem, 0.034rem);
     margin-bottom: clamp(3.688rem, 7.2vw + 0.1rem, 6.563rem);
 }
 .flex{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: clamp(0.964rem, 2vw, 1.75rem);
 }
-.flex__cover2{
+/*.flex__cover2{
     margin-bottom: clamp(1.25rem, 5.5vw - 1.5rem, 3.375rem);
+}*/
+.flex__item1{
+    position: relative;
+    box-sizing: border-box;
 }
-.flex__item1 .flex__cover1 img{
-    width: clamp(19.906rem, 43vw - 1.8rem, 36.125rem);
+.flex__item1::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
 }
-.flex__item2 .flex__cover2 img{
-    width: clamp(20.875rem, 45vw - 1.8rem, 37.875rem);
+.flex__item1 img{
+    /*width: clamp(19.906rem, 43vw - 1.8rem, 36.125rem);*/
+    border: 1px solid var(--white);
+    /*background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(</images/girl_1.png>), lightgray 50% / cover no-repeat;*/
+    background: var(--black);
+    width: 100%;
+}
+.flex__item2 img{
+    /*width: clamp(20.875rem, 45vw - 1.8rem, 37.875rem);*/
+    width: 100%;
+    border: 1px solid var(--white);
+    margin-bottom: clamp(1.25rem, 5.5vw - 1.5rem, 3.375rem);
 }
 .flex__description{
     color: var(--grey);
@@ -60,11 +80,13 @@ body{
     padding: clamp(0.689rem, 1.6vw - 0.1rem, 1.25rem) clamp(1.102rem, 2.4vw - 0.1rem, 2rem);
 }
 .footer{
+    background-color: var(--white);
+}
+.container_footer{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    gap: clamp(2.5rem, 13.5vw - 4.2rem, 7.75rem);
+    justify-content: space-between;
+    /*gap: clamp(2.5rem, 13.5vw - 4.2rem, 7.75rem);*/
     padding-top: clamp(2.5rem, 4.6vw + 0.1rem, 4.188rem);
     padding-bottom: clamp(2.5rem, 4.65vw + 0.1rem, 4.25rem);
     margin-bottom: clamp(4.375rem, 8.3vw + 0.1rem, 7.5rem);
@@ -79,7 +101,7 @@ body{
 }
 @media(max-width: 767px){
     .container{
-        padding: clamp(3.75rem, 2.9vw + 3rem, 4.375rem) clamp(0.875rem, 9.7vw - 1.5rem, 3.125rem) clamp(4.2rem, 2.9vw + 3rem, 4.375rem) clamp(1rem, 10vw - 1.65rem, 3.125rem);
+        padding: clamp(3.75rem, 2.9vw + 3rem, 4.375rem) clamp(1rem, 10vw - 1.65rem, 3.125rem) clamp(4.4rem, 2.9vw + 3rem, 4.375rem) clamp(1rem, 10vw - 1.65rem, 3.125rem);
     }
     .tesis{
         line-height: clamp(1.875rem, 4.1vw + 0.75rem, 2.7rem);
@@ -87,23 +109,31 @@ body{
     }
     .flex{
         flex-direction: column;
+        gap: clamp(-0.036rem, 3vw, 1.75rem);
     }
-    .flex__item1{
+    /*.flex__item1{
         margin: 0 auto;
-    }
-    .flex__item1 .flex__cover1 img{
+    }*/
+    /*.flex__item1 .flex__cover1 img{
         width: max(50vw, 330px);
-    }
-    .flex__item2 .flex__cover2 img{
-        width: max(50vw, 330px);
+    }*/
+    .flex__item2 img{
+        margin-bottom: clamp(1.4rem, 5.5vw - 1.5rem, 3.375rem);
     }
     .flex__description{
         max-width: max(321px,80vw);
     }
     .footer{
         gap: clamp(1.813rem, 2.7vw + 1.2rem, 2.5rem);
-        padding: clamp(1.46rem, 4.65vw + 0.3rem, 2.5rem) 0 clamp(1.813rem, 5.52vw + 0.5rem, 3.125rem);
+        padding: clamp(1.46rem, 4.65vw + 0.3rem, 2.5rem) 0 clamp(1.5rem, 4.65vw + 0.3rem, 2.5rem) ;
         margin-bottom: clamp(3.75rem, 3vw + 2.95rem, 4.375rem);
+    }
+    .container_footer{
+        padding-top: 0;
+        padding-bottom: 0;
+        /*margin-bottom: clamp(4.375rem, 8.3vw + 0.1rem, 7.5rem);*/
+        /*padding: 0;*/
+        margin: 0;
     }
     .footer__link{
         font-size: clamp(0.75rem, 4vw - 0.3rem, 1.625rem);
